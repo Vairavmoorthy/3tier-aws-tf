@@ -1,8 +1,6 @@
 # Provider
 provider "aws" {
   region = var.region
-  access_key = "AKIAWFDUJZ77P5ODB5N6"
-  secret_key = "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"
 }
 # Defining VPC
 resource "aws_vpc" "cloudvpc" {
