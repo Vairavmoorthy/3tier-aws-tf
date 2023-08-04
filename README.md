@@ -197,6 +197,7 @@ resource "aws_db_instance" "replica-masterdb" {
   #final_snapshot_identifier = "replica-masterdb-final-snapshot"  # Unique name for the final snapshot
   replicate_source_db = aws_db_instance.masterdb.identifier
 }
+
 **Step 4:- Create a file for Insance**
 
 resource "aws_instance" "ubuntu_20" {
