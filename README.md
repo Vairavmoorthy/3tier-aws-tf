@@ -225,6 +225,7 @@ resource "aws_instance" "ubuntu_20a" {
   }
 }
 **Step 5:- Create a file for Insance**
+
 I have created a data file to install the WordPress application.
 resource "aws_instance" "ubuntu_20" {
     ami = "ami-08e5424edfe926b43"
@@ -252,6 +253,7 @@ resource "aws_instance" "ubuntu_20a" {
 }
 
 **Step 6:- Create a file for Load Balancer**
+
 resource "aws_lb" "ext-alb" {
   name               = "External-Lb"
   internal           = false
@@ -293,6 +295,7 @@ resource "aws_lb_listener" "ext-elb" {
 }
 
 **Step 7:- Create a file for Output**
+
 output "lb_dns_name" {
   value = aws_lb.ext-alb.dns_name
 }
